@@ -1,0 +1,147 @@
+{
+  "@@locale": "en",
+  "appTitle": "Plant Lens",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Label for language selection"
+  },
+  "selectLanguageSubtitle": "Choose your preferred language for the app",
+  "@selectLanguageSubtitle": {
+    "description": "Subtitle for language selection screen"
+  },
+  "continueButton": "Continue",
+  "@continueButton": {
+    "description": "Continue button text"
+  },
+  "welcome": "Welcome to Plant Lens",
+  "@welcome": {
+    "description": "Welcome message"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile tab title"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home tab title"
+  },
+  "history": "History",
+  "@history": {
+    "description": "History tab title"
+  },
+  "favorites": "Favorites",
+  "@favorites": {
+    "description": "Favorites tab title"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings section title"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Theme setting title"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language setting title"
+  },
+  "chooseLanguage": "Choose Language",
+  "@chooseLanguage": {
+    "description": "Language selection dialog title"
+  },
+  "themeSubtitle": "Choose your preferred theme",
+  "@themeSubtitle": {
+    "description": "Theme setting subtitle"
+  },
+  "languageSubtitle": "Choose your preferred language",
+  "@languageSubtitle": {
+    "description": "Language setting subtitle"
+  },
+  "signInWithGoogle": "Sign in with Google",
+  "@signInWithGoogle": {
+    "description": "Google sign in button text"
+  },
+  "signOut": "Sign Out",
+  "@signOut": {
+    "description": "Sign out button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+  "displayName": "Display Name",
+  "@displayName": {
+    "description": "Display name field label"
+  },
+  "userId": "User ID",
+  "@userId": {
+    "description": "User ID field label"
+  },
+  "plantsIdentified": "Plants Identified",
+  "@plantsIdentified": {
+    "description": "Plants identified statistic"
+  },
+  "recentScans": "Recent Scans",
+  "@recentScans": {
+    "description": "Recent scans statistic"
+  },
+  "streakDays": "Streak Days",
+  "@streakDays": {
+    "description": "Streak days statistic"
+  },
+  "identifyingPlant": "Identifying your plant...",
+  "@identifyingPlant": {
+    "description": "Loading message when identifying plant"
+  },
+  "selectImageFirst": "Please select an image first.",
+  "@selectImageFirst": {
+    "description": "Error message when no image selected"
+  },
+  "tapToSelectImage": "Tap to select an image",
+  "@tapToSelectImage": {
+    "description": "Placeholder text for image selection"
+  },
+  "camera": "Camera",
+  "@camera": {
+    "description": "Camera option"
+  },
+  "gallery": "Gallery",
+  "@gallery": {
+    "description": "Gallery option"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+  "selectImageSource": "Select Image Source",
+  "@selectImageSource": {
+    "description": "Image source selection dialog title"
+  },
+  "identifyPlant": "Identify Plant",
+  "@identifyPlant": {
+    "description": "Identify plant button text"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications setting title"
+  },
+  "privacy": "Privacy",
+  "@privacy": {
+    "description": "Privacy setting title"
+  },
+  "notificationsSubtitle": "Manage your notifications",
+  "@notificationsSubtitle": {
+    "description": "Notifications setting subtitle"
+  },
+  "privacySubtitle": "Privacy and data settings",
+  "@privacySubtitle": {
+    "description": "Privacy setting subtitle"
+  },
+  "notImplementedYet": "This feature is coming soon!",
+  "@notImplementedYet": {
+    "description": "Message for features not yet implemented"
+  }
+}

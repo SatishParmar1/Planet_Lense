@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../viewmodels/auth_viewmodel.dart';
 import '../providers/theme_provider.dart';
+import '../providers/language_provider.dart';
+import '../l10n/app_localizations.dart';
 import '../theme/app_theme.dart';
 
 class ProfileView extends StatelessWidget {
@@ -11,7 +13,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: Text(AppLocalizations.of(context)!.profile),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -404,7 +406,7 @@ class ProfileView extends StatelessWidget {
               ),
               const SizedBox(width: 12),
               Text(
-                'Settings',
+                AppLocalizations.of(context)!.settings,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
@@ -433,6 +435,38 @@ class ProfileView extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text(
                       themeProvider.currentThemeName,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: AppColors.primary,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+          
+          const Divider(height: 24),
+          
+          // Language Setting
+          _buildSettingTile(
+            context,
+            icon: Icons.language,
+            title: AppLocalizations.of(context)!.language,
+            subtitle: 'Choose your preferred language',
+            onTap: () => _showLanguageDialog(context),
+            trailing: Consumer<LanguageProvider>(
+              builder: (context, languageProvider, child) {
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      languageProvider.currentLanguageFlag,
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      languageProvider.currentLanguageName,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.primary,
                         fontWeight: FontWeight.w500,
@@ -630,6 +664,89 @@ class ProfileView extends StatelessWidget {
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(),
                   child: const Text('Cancel'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  void _showLanguageDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Consumer<LanguageProvider>(
+          builder: (context, languageProvider, child) {
+            return AlertDialog(
+              title: Text(AppLocalizations.of(context)!.selectLanguage),
+              content: Container(
+                width: double.maxFinite,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: LanguageProvider.supportedLocales.length,
+                  itemBuilder: (context, index) {
+                    final locale = LanguageProvider.supportedLocales[index];
+                    final languageCode = locale.languageCode;
+                    final languageName = LanguageProvider.languageNames[languageCode] ?? 'Unknown';
+                    final languageFlag = LanguageProvider.languageFlags[languageCode] ?? '🌐';
+                    final isSelected = languageProvider.currentLanguageCode == languageCode;
+
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      child: InkWell(
+                        onTap: () {
+                          languageProvider.setLanguage(languageCode);
+                          Navigator.of(context).pop();
+                        },
+                        borderRadius: BorderRadius.circular(8),
+                        child: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              color: isSelected ? AppColors.primary : Colors.transparent,
+                              width: 2,
+                            ),
+                            color: isSelected 
+                                ? AppColors.primary.withOpacity(0.1)
+                                : Colors.transparent,
+                          ),
+                          child: Row(
+                            children: [
+                              Text(
+                                languageFlag,
+                                style: const TextStyle(fontSize: 24),
+                              ),
+                              const SizedBox(width: 16),
+                              Expanded(
+                                child: Text(
+                                  languageName,
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    color: isSelected ? AppColors.primary : null,
+                                  ),
+                                ),
+                              ),
+                              if (isSelected)
+                                Icon(
+                                  Icons.check_circle,
+                                  color: AppColors.primary,
+                                  size: 20,
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text(AppLocalizations.of(context)!.cancel),
                 ),
               ],
             );
