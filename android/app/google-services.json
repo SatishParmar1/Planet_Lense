@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1029040293741",
+    "project_id": "plantlens-b74d5",
+    "storage_bucket": "plantlens-b74d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029040293741:android:e9ebb3bfb445127c187c64",
+        "android_client_info": {
+          "package_name": "com.example.plantfinding"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8MeoZ5-pg316xOtFkF0gCQNJivvdDQJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
