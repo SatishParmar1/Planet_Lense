@@ -407,7 +407,7 @@ class _HomeViewState extends State<HomeView> with WidgetsBindingObserver {
           left: 0,
           right: 0,
           child: Container(
-            height: 370,
+            height: 200,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,

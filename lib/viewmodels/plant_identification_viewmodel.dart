@@ -69,6 +69,16 @@ class PlantIdentificationViewModel extends ChangeNotifier {
     }
   }
 
+  Future<void> setImageFromPath(String imagePath) async {
+    try {
+      _resetState();
+      _selectedImage = XFile(imagePath);
+      notifyListeners();
+    } catch (e) {
+      _setError('Failed to set image: $e');
+    }
+  }
+
   Future<void> identifyPlant() async {
     if (_selectedImage == null) {
       _setError('Please select an image first.');
