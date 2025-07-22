@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import '../l10n/app_localizations.dart';
 
 class FloatingBottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -38,26 +39,26 @@ class FloatingBottomNavBar extends StatelessWidget {
             unselectedItemColor: Colors.white.withOpacity(0.6),
             selectedFontSize: 12,
             unselectedFontSize: 10,
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.camera_alt_outlined),
-                activeIcon: Icon(Icons.camera_alt),
-                label: 'Identify',
+                icon: const Icon(Icons.camera_alt_outlined),
+                activeIcon: const Icon(Icons.camera_alt),
+                label: AppLocalizations.of(context)!.identify,
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.history_outlined),
-                activeIcon: Icon(Icons.history),
-                label: 'History',
+                icon: const Icon(Icons.history_outlined),
+                activeIcon: const Icon(Icons.history),
+                label: AppLocalizations.of(context)!.history,
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_outline),
-                activeIcon: Icon(Icons.favorite),
-                label: 'Favorites',
+                icon: const Icon(Icons.favorite_outline),
+                activeIcon: const Icon(Icons.favorite),
+                label: AppLocalizations.of(context)!.favorites,
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline),
-                activeIcon: Icon(Icons.person),
-                label: 'Profile',
+                icon: const Icon(Icons.person_outline),
+                activeIcon: const Icon(Icons.person),
+                label: AppLocalizations.of(context)!.profile,
               ),
             ],
           ),

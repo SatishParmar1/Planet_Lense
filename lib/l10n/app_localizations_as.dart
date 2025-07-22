@@ -36,6 +36,9 @@ class AppLocalizationsAs extends AppLocalizations {
   String get favorites => 'প্ৰিয়';
 
   @override
+  String get identify => 'চিনাক্ত';
+
+  @override
   String get settings => 'ছেটিংছ';
 
   @override

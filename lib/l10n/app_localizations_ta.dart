@@ -37,6 +37,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get favorites => 'பிடித்தவை';
 
   @override
+  String get identify => 'அடையாளம்';
+
+  @override
   String get settings => 'அமைப்புகள்';
 
   @override

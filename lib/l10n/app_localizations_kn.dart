@@ -37,6 +37,9 @@ class AppLocalizationsKn extends AppLocalizations {
   String get favorites => 'ಮೆಚ್ಚಿನವುಗಳು';
 
   @override
+  String get identify => 'ಗುರುತಿಸಿ';
+
+  @override
   String get settings => 'ಸೆಟ್ಟಿಂಗ್‌ಗಳು';
 
   @override

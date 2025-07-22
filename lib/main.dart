@@ -32,6 +32,7 @@ class PlantLensApp extends StatelessWidget {
       child: Consumer2<ThemeProvider, LanguageProvider>(
         builder: (context, themeProvider, languageProvider, child) {
           return MaterialApp(
+            key: ValueKey(languageProvider.currentLocale.languageCode),
             title: 'Plant Lens',
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
@@ -46,14 +47,9 @@ class PlantLensApp extends StatelessWidget {
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: LanguageProvider.supportedLocales,
-            routes: {
-              '/': (context) => languageProvider.isFirstLaunch 
-                  ? const LanguageSelectionView() 
-                  : const MainNavigationView(),
-              '/main': (context) => const MainNavigationView(),
-              '/language-selection': (context) => const LanguageSelectionView(),
-            },
-            initialRoute: '/',
+            home: languageProvider.isFirstLaunch 
+                ? const LanguageSelectionView() 
+                : const MainNavigationView(),
           );
         },
       ),

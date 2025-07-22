@@ -37,6 +37,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get favorites => 'Favoritos';
 
   @override
+  String get identify => 'Identificar';
+
+  @override
   String get settings => 'Configuración';
 
   @override

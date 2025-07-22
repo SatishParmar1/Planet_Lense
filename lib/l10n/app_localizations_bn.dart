@@ -37,6 +37,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get favorites => 'পছন্দসই';
 
   @override
+  String get identify => 'সনাক্ত';
+
+  @override
   String get settings => 'সেটিংস';
 
   @override

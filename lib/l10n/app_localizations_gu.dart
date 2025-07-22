@@ -37,6 +37,9 @@ class AppLocalizationsGu extends AppLocalizations {
   String get favorites => 'મનપસંદ';
 
   @override
+  String get identify => 'ઓળખ';
+
+  @override
   String get settings => 'સેટિંગ્સ';
 
   @override

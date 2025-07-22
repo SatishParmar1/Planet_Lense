@@ -36,7 +36,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get favorites => 'ਪਸੰਦੀਦਾ';
 
   @override
-  String get settings => 'ਸੈਟਿੰਗਜ਼';
+  String get identify => 'ਪਛਾਣ';
+
+  @override
+  String get settings => 'ਸੈਟਿੰਗਾਂ';
 
   @override
   String get theme => 'ਥੀਮ';

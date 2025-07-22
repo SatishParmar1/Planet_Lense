@@ -104,12 +104,14 @@ class LanguageProvider extends ChangeNotifier {
     try {
       if (supportedLocales.any((locale) => locale.languageCode == languageCode)) {
         _currentLocale = Locale(languageCode);
+        print('Language changed to: $languageCode'); // Debug print
         notifyListeners();
         
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString(_languageKey, languageCode);
       }
     } catch (e) {
+      print('Error setting language: $e'); // Debug print
       // Handle error silently
     }
   }

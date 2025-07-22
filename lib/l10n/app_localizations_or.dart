@@ -36,6 +36,9 @@ class AppLocalizationsOr extends AppLocalizations {
   String get favorites => 'ପସନ୍ଦ';
 
   @override
+  String get identify => 'ଚିହ୍ନଟ';
+
+  @override
   String get settings => 'ସେଟିଂସ';
 
   @override

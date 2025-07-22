@@ -37,6 +37,9 @@ class AppLocalizationsMl extends AppLocalizations {
   String get favorites => 'പ്രിയപ്പെട്ടവ';
 
   @override
+  String get identify => 'തിരിച്ചറിയുക';
+
+  @override
   String get settings => 'സെറ്റിംഗുകൾ';
 
   @override

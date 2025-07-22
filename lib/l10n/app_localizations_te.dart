@@ -37,6 +37,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get favorites => 'ఇష్టమైనవి';
 
   @override
+  String get identify => 'గుర్తించు';
+
+  @override
   String get settings => 'సెట్టింగులు';
 
   @override

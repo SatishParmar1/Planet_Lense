@@ -2,6 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../l10n/app_localizations.dart';
+
 class ImageDisplayWidget extends StatelessWidget {
   final XFile? imageFile;
   final VoidCallback onTap;
@@ -24,15 +26,15 @@ class ImageDisplayWidget extends StatelessWidget {
           border: Border.all(color: Colors.grey[700]!),
         ),
         child: imageFile == null
-            ? const Center(
+            ? Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.image, size: 80, color: Colors.grey),
-                    SizedBox(height: 8),
+                    const Icon(Icons.image, size: 80, color: Colors.grey),
+                    const SizedBox(height: 8),
                     Text(
-                      'Tap to select an image',
-                      style: TextStyle(color: Colors.grey),
+                      AppLocalizations.of(context)!.tapToSelectImage,
+                      style: const TextStyle(color: Colors.grey),
                     ),
                   ],
                 ),

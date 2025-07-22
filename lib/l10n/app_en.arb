@@ -36,6 +36,10 @@
   "@favorites": {
     "description": "Favorites tab title"
   },
+  "identify": "Identify",
+  "@identify": {
+    "description": "Identify tab title"
+  },
   "settings": "Settings",
   "@settings": {
     "description": "Settings section title"

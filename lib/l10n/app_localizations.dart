@@ -178,6 +178,12 @@ abstract class AppLocalizations {
   /// **'Favorites'**
   String get favorites;
 
+  /// Identify tab title
+  ///
+  /// In en, this message translates to:
+  /// **'Identify'**
+  String get identify;
+
   /// Settings section title
   ///
   /// In en, this message translates to:

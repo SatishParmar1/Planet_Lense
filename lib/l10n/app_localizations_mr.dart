@@ -36,6 +36,9 @@ class AppLocalizationsMr extends AppLocalizations {
   String get favorites => 'आवडते';
 
   @override
+  String get identify => 'ओळख';
+
+  @override
   String get settings => 'सेटिंग्ज';
 
   @override
